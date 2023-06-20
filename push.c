@@ -9,28 +9,28 @@ void push(stack_t **head, unsigned int counter)
 {
 	int n, j = 0, flag = 0;
 
-	if (file.arg)
+	if (files.arg)
 	{
-		if (file.arg[0] == '-')
+		if (files.arg[0] == '-')
 			j++;
-		for (; file.arg[j] != '\0'; j++)
+		for (; files.arg[j] != '\0'; j++)
 		{
-			if (file.arg[j] > 57 || file.arg[j] < 48)
+			if (files.arg[j] > 57 || files.arg[j] < 48)
 				flag = 1; }
 		if (flag == 1)
 		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
-			fclose(file.file);
-			free(file.content);
+			fclose(files.file);
+			free(files.content);
 			free_stack(*head);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
-		fclose(file.file);
-		free(file.content);
+		fclose(files.file);
+		free(files.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE); }
-	n = atoi(file.arg);
-	if (file.lifi == 0)
+	n = atoi(files.arg);
+	if (files.lifi == 0)
 		addnode(head, n);
 	else
 		addqueue(head, n);
