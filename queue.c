@@ -9,7 +9,7 @@ void queue(stack_t **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;
-	bus.lifi = 1;
+	files.lifi = 1;
 }
 
 /**
