@@ -67,6 +67,7 @@ void addqueue(stack_t **head, int n);
 void free_stack(stack_t *head);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 void pstr(stack_t **head, unsigned int counter);
 void div(stack_t **head, unsigned int counter);
 void rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
@@ -83,6 +84,8 @@ void rotl(stack_t **head,  __attribute__((unused)) unsigned int counter);
 void swap(stack_t **head, unsigned int counter);
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
 void mod(stack_t **head, unsigned int counter);
+=======
+>>>>>>> parent of ceccd71 (bugs)
 =======
 >>>>>>> parent of ceccd71 (bugs)
 =======
