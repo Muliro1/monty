@@ -7,12 +7,12 @@
  */
 void sub(stack_t **head, unsigned int counter)
 {
-	stack_t *aux;
+	stack_t *temp;
 	int sus, nodes;
 
-	aux = *head;
-	for (nodes = 0; aux != NULL; nodes++)
-		aux = aux->next;
+	temp = *head;
+	for (nodes = 0; temp != NULL; nodes++)
+		temp = temp->next;
 	if (nodes < 2)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", counter);
@@ -21,9 +21,9 @@ void sub(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	aux = *head;
-	sus = aux->next->n - aux->n;
-	aux->next->n = sus;
-	*head = aux->next;
-	free(aux);
+	temp = *head;
+	sus = temp->next->n - temp->n;
+	temp->next->n = sus;
+	*head = temp->next;
+	free(temp);
 }

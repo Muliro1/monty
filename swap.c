@@ -8,15 +8,15 @@
 void swap(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
-	int len = 0, aux;
+	int length = 0, temp;
 
 	h = *head;
 	while (h)
 	{
 		h = h->next;
-		len++;
+		length++;
 	}
-	if (len < 2)
+	if (length < 2)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", counter);
 		fclose(files.file);
@@ -25,7 +25,7 @@ void swap(stack_t **head, unsigned int counter)
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
-	aux = h->n;
+	temp = h->n;
 	h->n = h->next->n;
-	h->next->n = aux;
+	h->next->n = temp;
 }
